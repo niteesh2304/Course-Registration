@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            CourseHub
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#students">Students</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Learn Today, Lead Tomorrow</h1>
+
+            <p>
+                Join thousands of learners and boost your skills
+                with our professional courses.
+            </p>
+
+            <button class="hero-btn"
+                onclick="scrollToCourses()">
+                Explore Courses
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Courses -->
+
+    <section id="courses">
+
+        <h2 class="section-title">
+            Popular Courses
+        </h2>
+
+        <div class="course-container">
+
+            <div class="course-card">
+                <i class="fa-brands fa-java"></i>
+
+                <h3>Java Full Stack</h3>
+
+                <p>
+                    Spring Boot, React,
+                    Hibernate, MySQL
+                </p>
+
+                <button onclick="openForm('Java Full Stack')">
+                    Enroll Now
+                </button>
+            </div>
+
+            <div class="course-card">
+                <i class="fa-brands fa-python"></i>
+
+                <h3>Python Development</h3>
+
+                <p>
+                    Django, Flask,
+                    REST APIs
+                </p>
+
+                <button onclick="openForm('Python Development')">
+                    Enroll Now
+                </button>
+            </div>
+
+            <div class="course-card">
+                <i class="fa-solid fa-database"></i>
+
+                <h3>SQL Mastery</h3>
+
+                <p>
+                    Database Design &
+                    Query Optimization
+                </p>
+
+                <button onclick="openForm('SQL Mastery')">
+                    Enroll Now
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Student Table -->
+
+    <section id="students">
+
+        <h2 class="section-title">
+            Registered Students
+        </h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Modal -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <span class="close"
+                onclick="closeForm()">
+                &times;
+            </span>
+
+            <h2>Course Registration</h2>
+
+            <form id="registerForm">
+
+                <input type="text"
+                    id="studentName"
+                    placeholder="Enter Name"
+                    required>
+
+                <input type="email"
+                    id="email"
+                    placeholder="Enter Email"
+                    required>
+
+                <input type="text"
+                    id="courseInput"
+                    readonly>
+
+                <button type="submit">
+                    Register
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Toast -->
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
