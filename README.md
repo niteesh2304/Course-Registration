@@ -78,15 +78,17 @@ Course-Registration-System
 
 ### Home Page
 Provides an attractive landing page with course information.
+![Home page screen shot](img/homepage.png)
 
 ### Course Listing
 Displays available courses in interactive course cards.
+![course screenshot](img/courses.png)
 
 ### Registration Module
 Allows students to enroll in courses by submitting their details.
+![course screenshot](img/register.png)
 
-### Student Management
-Displays the list of registered students.
+
 
 ---
 
