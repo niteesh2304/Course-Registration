@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            CourseHub
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#students">Students</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Learn Today, Lead Tomorrow</h1>
+
+            <p>
+                Explore industry-ready courses and accelerate
+                your career with practical learning and
+                hands-on projects.
+            </p>
+
+            <button class="hero-btn"
+                onclick="scrollToCourses()">
+                Explore Courses
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Statistics -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2>500+</h2>
+            <p>Students Enrolled</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>25+</h2>
+            <p>Courses Available</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>15+</h2>
+            <p>Expert Trainers</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>95%</h2>
+            <p>Student Satisfaction</p>
+        </div>
+
+    </section>
+
+    <!-- Courses -->
+
+    <section id="courses">
+
+        <h2 class="section-title">
+            Featured Courses
+        </h2>
+
+        <div class="course-container">
+
+            <div class="course-card">
+
+                <i class="fa-brands fa-java"></i>
+
+                <h3>Java Full Stack</h3>
+
+                <p>
+                    Learn Java, Spring Boot,
+                    Hibernate, MySQL and React.
+                </p>
+
+                <ul>
+                    <li>6 Months Duration</li>
+                    <li>Industry Projects</li>
+                    <li>Certificate Included</li>
+                </ul>
+
+                <button
+                    onclick="selectCourse('Java Full Stack')">
+                    Enroll Now
+                </button>
+
+            </div>
+
+            <div class="course-card">
+
+                <i class="fa-brands fa-python"></i>
+
+                <h3>Python Development</h3>
+
+                <p>
+                    Learn Python, Django,
+                    Flask and REST APIs.
+                </p>
+
+                <ul>
+                    <li>5 Months Duration</li>
+                    <li>Real Projects</li>
+                    <li>Certificate Included</li>
+                </ul>
+
+                <button
+                    onclick="selectCourse('Python Development')">
+                    Enroll Now
+                </button>
+
+            </div>
+
+            <div class="course-card">
+
+                <i class="fa-solid fa-database"></i>
+
+                <h3>SQL Mastery</h3>
+
+                <p>
+                    Database Design,
+                    Query Optimization
+                    and Performance Tuning.
+                </p>
+
+                <ul>
+                    <li>3 Months Duration</li>
+                    <li>Case Studies</li>
+                    <li>Certificate Included</li>
+                </ul>
+
+                <button
+                    onclick="selectCourse('SQL Mastery')">
+                    Enroll Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Why Choose Us -->
+
+    <section class="why-us">
+
+        <h2 class="section-title">
+            Why Choose Us?
+        </h2>
+
+        <div class="features">
+
+            <div class="feature-box">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Hands-On Learning</h3>
+                <p>
+                    Practical projects and
+                    real-world assignments.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-certificate"></i>
+                <h3>Certification</h3>
+                <p>
+                    Receive completion
+                    certificates.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>Career Support</h3>
+                <p>
+                    Resume building and
+                    interview preparation.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-users"></i>
+                <h3>Expert Mentors</h3>
+                <p>
+                    Learn from experienced
+                    industry professionals.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Registration -->
+
+    <section id="register">
+
+        <h2 class="section-title">
+            Register For A Course
+        </h2>
+
+        <div class="register-container">
+
+            <form id="registerForm">
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter Full Name"
+                    required>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email Address"
+                    required>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter Mobile Number"
+                    required>
+
+                <select
+                    id="courseName"
+                    required>
+
+                    <option value="">
+                        Select Course
+                    </option>
+
+                    <option value="Java Full Stack">
+                        Java Full Stack
+                    </option>
+
+                    <option value="Python Development">
+                        Python Development
+                    </option>
+
+                    <option value="SQL Mastery">
+                        SQL Mastery
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    Register Now
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Registered Students -->
+
+    <section id="students">
+
+        <h2 class="section-title">
+            Registered Students
+        </h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Course</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            Course Registration System
+        </h3>
+
+        <p>
+            Build Skills. Grow Careers.
+        </p>
+
+        <p>
+            © 2026 All Rights Reserved
+        </p>
+
+    </footer>
+
+    <!-- Toast Message -->
+
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
